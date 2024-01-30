@@ -5,6 +5,17 @@ import unocss from "lume/plugins/unocss.ts";
 const site = lume();
 
 site.use(nunjucks());
-site.use(unocss());
+site.use(
+	unocss({
+		options: {
+			theme: {
+				colors: {
+					dark: "#283E0F",
+					light: "#E3FAB7",
+				},
+			},
+		},
+	})
+);
 
 export default site;

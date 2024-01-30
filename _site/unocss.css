@@ -4,4 +4,6 @@
 .mx-auto{margin-left:auto;margin-right:auto;}
 .my{margin-top:1rem;margin-bottom:1rem;}
 .max-w-3xl{max-width:48rem;}
+.bg-dark{--un-bg-opacity:1;background-color:rgb(40 62 15 / var(--un-bg-opacity));}
+.text-light{--un-text-opacity:1;color:rgb(227 250 183 / var(--un-text-opacity));}
 .font-\[\'Urbanist\'\]{font-family:'Urbanist';}

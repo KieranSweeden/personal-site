@@ -1,5 +1,5 @@
 ---
-layout: layouts/base-layout.pug
+layout: layouts/base-layout.njk
 pageName: Home
 ---
 

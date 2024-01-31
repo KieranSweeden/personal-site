@@ -10,11 +10,60 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="../unocss.css" />
+		<script
+			src="https://unpkg.com/htmx.org@1.9.10"
+			integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+			crossorigin="anonymous"
+		></script>
+		<style>
+			@keyframes fade-in {
+				from {
+					opacity: 0;
+				}
+			}
+
+			@keyframes fade-out {
+				to {
+					opacity: 0;
+				}
+			}
+
+			@keyframes slide-from-right {
+				from {
+					transform: translateX(90px);
+				}
+			}
+
+			@keyframes slide-to-left {
+				to {
+					transform: translateX(-90px);
+				}
+			}
+
+			.slide-in-out {
+				view-transition-name: slide-in-out;
+			}
+
+			::view-transition-old(slide-in-out) {
+				animation: 100ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+					250ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+			}
+			::view-transition-new(slide-in-out) {
+				animation: 250ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+					500ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+			}
+		</style>
 		<title>{{ pageName }} · {{ SITE_NAME }}</title>
 	</head>
-	<body class="font-['Urbanist'] text-lime-200 bg-lime-950">
-		<div class="max-w-2xl mx-auto px-5">
+	<body
+		class="font-['Urbanist'] text-lime-200 bg-lime-950"
+		hx-boost="true"
+		hx-swap="transition:true"
+	>
+		<div class="max-w-xl mx-auto px-5">
 			{% include "../partials/navigation.njk" %}
+		</div>
+		<div class="max-w-xl mx-auto px-5 slide-in-out">
 			{{ content | safe }}
 		</div>
 	</body>

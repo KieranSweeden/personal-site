@@ -4,3 +4,5 @@ pageName: Contact
 ---
 
 # Contact
+
+Wanna get in touch?

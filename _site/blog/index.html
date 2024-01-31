@@ -6,10 +6,49 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 		<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,500;0,600;1,200;1,500;1,600&amp;display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="../unocss.css">
+		<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+		<style>
+			@keyframes fade-in {
+				from {
+					opacity: 0;
+				}
+			}
+
+			@keyframes fade-out {
+				to {
+					opacity: 0;
+				}
+			}
+
+			@keyframes slide-from-right {
+				from {
+					transform: translateX(90px);
+				}
+			}
+
+			@keyframes slide-to-left {
+				to {
+					transform: translateX(-90px);
+				}
+			}
+
+			.slide-in-out {
+				view-transition-name: slide-in-out;
+			}
+
+			::view-transition-old(slide-in-out) {
+				animation: 100ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+					250ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+			}
+			::view-transition-new(slide-in-out) {
+				animation: 250ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+					500ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+			}
+		</style>
 		<title>Blog · Kieran Sweeden</title>
 	</head>
-	<body class="font-['Urbanist'] text-lime-200 bg-lime-950">
-		<div class="max-w-2xl mx-auto px-5">
+	<body class="font-['Urbanist'] text-lime-200 bg-lime-950" hx-boost="true" hx-swap="transition:true">
+		<div class="max-w-xl mx-auto px-5">
 			
 
 <nav class="flex justify-between items-center py-5">
@@ -22,28 +61,31 @@
 		<li>
 			    
 
-<a href="/blog" class="text-lime-200 hover:underline underline">Blog</a>
+<a href="/blog/" class="text-lime-200 hover:underline underline">Blog</a>
 
 
 		</li>
 		<li>
 			    
 
-<a href="/about" class="text-lime-200 hover:underline no-underline">About</a>
+<a href="/about/" class="text-lime-200 hover:underline no-underline">About</a>
 
 
 		</li>
 		<li>
 			    
 
-<a href="/contact" class="text-lime-200 hover:underline no-underline">Contact</a>
+<a href="/contact/" class="text-lime-200 hover:underline no-underline">Contact</a>
 
 
 		</li>
 	</ul>
 </nav>
 
+		</div>
+		<div class="max-w-xl mx-auto px-5 slide-in-out">
 			<h1>Blog</h1>
+<p>So this is what I've been looking at...</p>
 
 		</div>
 	

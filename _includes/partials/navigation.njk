@@ -1,4 +1,16 @@
-<nav>
-	<h1>Kieran Sweeden</h1>
-	<p>content</p>
+{% import "components/links.njk" as links %}
+
+<nav class="flex justify-between items-center py-5">
+	{{ links.light(href="/", text="Kieran Sweeden", isActive=(url === "/")) }}
+	<ul class="list-none flex gap-5 align-center my-0 px-0">
+		<li>
+			{{ links.light(href="/blog", text="Blog", isActive=(url.startsWith("/blog"))) }}
+		</li>
+		<li>
+			{{ links.light(href="/about", text="About", isActive=(url.startsWith("/about"))) }}
+		</li>
+		<li>
+			{{ links.light(href="/contact", text="Contact", isActive=(url.startsWith("/contact"))) }}
+		</li>
+	</ul>
 </nav>

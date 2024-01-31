@@ -1,0 +1,8 @@
+{% macro light(href, text, isActive=false) %} {% set classList = ["text-lime-200" ,
+"hover:underline"] %} {% if isActive %} {% set classList =
+classList.concat("underline") if isActive %} {% else %} {% set classList =
+classList.concat("no-underline") %} {% endif %}
+
+<a href="{{ href }}" class="{{ classList | join(" ") }}">{{ text }}</a>
+
+{% endmacro %}

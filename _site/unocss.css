@@ -3,7 +3,19 @@
 /* layer: default */
 .mx-auto{margin-left:auto;margin-right:auto;}
 .my{margin-top:1rem;margin-bottom:1rem;}
-.max-w-3xl{max-width:48rem;}
-.bg-dark{--un-bg-opacity:1;background-color:rgb(40 62 15 / var(--un-bg-opacity));}
-.text-light{--un-text-opacity:1;color:rgb(227 250 183 / var(--un-text-opacity));}
+.my-0{margin-top:0;margin-bottom:0;}
+.max-w-2xl{max-width:42rem;}
+.flex{display:flex;}
+.list-none{list-style-type:none;}
+.items-center{align-items:center;}
+.justify-between{justify-content:space-between;}
+.gap-5{gap:1.25rem;}
+.bg-lime-950{--un-bg-opacity:1;background-color:rgb(26 46 5 / var(--un-bg-opacity));}
+.px-0{padding-left:0;padding-right:0;}
+.px-5{padding-left:1.25rem;padding-right:1.25rem;}
+.py-5{padding-top:1.25rem;padding-bottom:1.25rem;}
+.text-lime-200{--un-text-opacity:1;color:rgb(217 249 157 / var(--un-text-opacity));}
 .font-\[\'Urbanist\'\]{font-family:'Urbanist';}
+.underline{text-decoration-line:underline;}
+.hover\:underline:hover{text-decoration-line:underline;}
+.no-underline{text-decoration:none;}

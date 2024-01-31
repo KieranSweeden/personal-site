@@ -9,11 +9,11 @@
 			href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,500;0,600;1,200;1,500;1,600&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="unocss.css" />
+		<link rel="stylesheet" href="../unocss.css" />
 		<title>{{ pageName }} · {{ SITE_NAME }}</title>
 	</head>
-	<body class="font-['Urbanist'] text-light bg-dark">
-		<div class="max-w-3xl mx-auto">
+	<body class="font-['Urbanist'] text-lime-200 bg-lime-950">
+		<div class="max-w-2xl mx-auto px-5">
 			{% include "../partials/navigation.njk" %}
 			{{ content | safe }}
 		</div>

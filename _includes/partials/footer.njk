@@ -1,0 +1,11 @@
+{% import "components/links.njk" as links %}
+
+<footer class="bg-lime-900">
+    <div class="max-w-xl mx-auto px-5 py-10">
+        <div class="flex justify-center items-center">
+            <small class="text-lime-500">
+                Copyright &copy; 2024 | {{ links.light(href="/", text="Kieran Sweeden", isActive=(url === "/")) }}
+            </small>
+        </div>
+    </div>
+</footer>

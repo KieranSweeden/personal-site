@@ -1,93 +1,111 @@
 <!DOCTYPE html>
 <html><head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-		<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,500;0,600;1,200;1,500;1,600&amp;display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="../unocss.css">
-		<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
-		<style>
-			@keyframes fade-in {
-				from {
-					opacity: 0;
-				}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,500;0,600;1,200;1,500;1,600&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../unocss.css">
+	<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+	<style>
+		@keyframes fade-in {
+			from {
+				opacity: 0;
 			}
+		}
 
-			@keyframes fade-out {
-				to {
-					opacity: 0;
-				}
+		@keyframes fade-out {
+			to {
+				opacity: 0;
 			}
+		}
 
-			@keyframes slide-from-right {
-				from {
-					transform: translateX(90px);
-				}
+		@keyframes slide-from-right {
+			from {
+				transform: translateX(90px);
 			}
+		}
 
-			@keyframes slide-to-left {
-				to {
-					transform: translateX(-90px);
-				}
+		@keyframes slide-to-left {
+			to {
+				transform: translateX(-90px);
 			}
+		}
 
-			.slide-in-out {
-				view-transition-name: slide-in-out;
-			}
+		.slide-in-out {
+			view-transition-name: slide-in-out;
+		}
 
-			::view-transition-old(slide-in-out) {
-				animation: 100ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
-					250ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
-			}
-			::view-transition-new(slide-in-out) {
-				animation: 250ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
-					500ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
-			}
-		</style>
-		<title>Contact · Kieran Sweeden</title>
-	</head>
-	<body class="font-['Urbanist'] text-lime-200 bg-lime-950" hx-boost="true" hx-swap="transition:true">
-		<div class="max-w-xl mx-auto px-5">
-			
+		::view-transition-old(slide-in-out) {
+			animation: 100ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+				250ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+		}
 
-<nav class="flex justify-between items-center py-5">
-	    
+		::view-transition-new(slide-in-out) {
+			animation: 100ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+				250ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+		}
+	</style>
+	<title>Contact · Kieran Sweeden</title>
+</head>
+
+<body class="font-['Urbanist'] text-lime-200 bg-lime-950" hx-boost="true" hx-swap="transition:true">
+	
+
+<header>
+	<div class="max-w-xl mx-auto px-5 py-10">
+		<nav class="flex justify-between items-center">
+			    
 
 <a href="/" class="text-lime-200 hover:underline no-underline">Kieran Sweeden</a>
 
 
-	<ul class="list-none flex gap-5 align-center my-0 px-0">
-		<li>
-			    
+			<ul class="list-none flex gap-5 align-center my-0 px-0">
+				<li>
+					    
 
 <a href="/blog/" class="text-lime-200 hover:underline no-underline">Blog</a>
 
 
-		</li>
-		<li>
-			    
+				</li>
+				<li>
+					    
 
 <a href="/about/" class="text-lime-200 hover:underline no-underline">About</a>
 
 
-		</li>
-		<li>
-			    
+				</li>
+				<li>
+					    
 
 <a href="/contact/" class="text-lime-200 hover:underline underline">Contact</a>
 
 
-		</li>
-	</ul>
-</nav>
-
-		</div>
-		<div class="max-w-xl mx-auto px-5 slide-in-out">
-			<h1>Contact</h1>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+	<main class="max-w-xl mx-auto px-5 pb-12 slide-in-out">
+		<h1>Contact</h1>
 <p>Wanna get in touch?</p>
 
-		</div>
+	</main>
 	
+
+<footer class="bg-lime-900">
+    <div class="max-w-xl mx-auto px-5 py-10">
+        <div class="flex justify-center items-center">
+            <small class="text-lime-500">
+                Copyright © 2024 |     
+
+<a href="/" class="text-lime-200 hover:underline no-underline">Kieran Sweeden</a>
+
+
+            </small>
+        </div>
+    </div>
+</footer>
+
 
 </body></html>

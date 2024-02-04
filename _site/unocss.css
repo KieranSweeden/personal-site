@@ -9,13 +9,17 @@
 .transform{transform:translateX(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotateZ(var(--un-rotate-z)) skewX(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z));}
 .list-none{list-style-type:none;}
 .items-center{align-items:center;}
+.justify-center{justify-content:center;}
 .justify-between{justify-content:space-between;}
 .gap-5{gap:1.25rem;}
+.bg-lime-900{--un-bg-opacity:1;background-color:rgb(54 83 20 / var(--un-bg-opacity));}
 .bg-lime-950{--un-bg-opacity:1;background-color:rgb(26 46 5 / var(--un-bg-opacity));}
 .px-0{padding-left:0;padding-right:0;}
 .px-5{padding-left:1.25rem;padding-right:1.25rem;}
-.py-5{padding-top:1.25rem;padding-bottom:1.25rem;}
+.py-10{padding-top:2.5rem;padding-bottom:2.5rem;}
+.pb-12{padding-bottom:3rem;}
 .text-lime-200{--un-text-opacity:1;color:rgb(217 249 157 / var(--un-text-opacity));}
+.text-lime-500{--un-text-opacity:1;color:rgb(132 204 22 / var(--un-text-opacity));}
 .font-\[\'Urbanist\'\]{font-family:'Urbanist';}
 .underline{text-decoration-line:underline;}
 .hover\:underline:hover{text-decoration-line:underline;}
